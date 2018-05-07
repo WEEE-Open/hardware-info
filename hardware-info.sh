@@ -1,7 +1,7 @@
 #! /bin/sh
 # Variables
 dependencies=( "grep" "lsblk" "lshw" "lspci" "lscpu" "smartctl")
-commands=("echo WEEE Open" "lshw" "lspci -v" "lscpu")
+commands=("echo WEEE Open" "lshw" "lspci -v" "lscpu" "./WEEE_SmartCTL")
 
 #Check dependencies
 for dep in ${dependencies[@]}
@@ -46,9 +46,3 @@ done
 #View result
 echo "This is the result!"
 cat $1
-
-# Possible command for using smartctl
-#for drive in /dev/sd[a-z]
-#do
-#	echo $drive
-#done
