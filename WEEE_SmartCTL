@@ -1,0 +1,9 @@
+#! /bin/bash
+
+#All dependencies are already installed!
+
+#Possible command for using smartctl
+for drive in /dev/sd[a-z]
+do
+  echo $drive
+done
