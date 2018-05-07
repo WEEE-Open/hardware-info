@@ -1,12 +1,7 @@
 #! /bin/sh
 # Variables
 dependencies=( "grep" "lsblk" "lshw" "lspci" "lscpu" "smartctl")
-commands=("echo ciao proprio" "lshw" "lspci -v" "lscpu")
-
-for drive in /dev/sd[a-z]
-do
-	echo $drive
-done
+commands=("echo WEEE Open" "lshw" "lspci -v" "lscpu")
 
 #Check dependencies
 for dep in ${dependencies[@]}
@@ -37,8 +32,7 @@ do
 	fi
 done
 
-
-# #Creo il file di output
+# Creating output file
 echo "Sto creando il file di log..."
 touch $1
 
@@ -52,3 +46,9 @@ done
 #View result
 echo "This is the result!"
 cat $1
+
+# Possible command for using smartctl
+#for drive in /dev/sd[a-z]
+#do
+#	echo $drive
+#done
